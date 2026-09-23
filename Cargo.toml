@@ -11,11 +11,11 @@ categories = [ "web-programming", "web-programming::http-client" ]
 edition = "2018"
 resolver = "2"
 
-version = "0.12.1"
+version = "0.12.2"
 
 [dependencies]
 chrono = { version = "0.4", default-features = false, features = ["serde"] }
-reqwest = { version = "0.12", default-features = false, features = ["blocking", "json"] }
+reqwest = { version = "0.13", default-features = false, features = ["blocking", "json"] }
 serde = "1.0"
 serde_derive = "1.0"
 serde_json = "1.0"
@@ -28,7 +28,3 @@ web-time = { version = "1.1" }
 [dev-dependencies]
 tokio = { version = "1.43", features = ["macros"]}
 crates_io_api = { package = "crates_io_api-wasm-patch", git = "https://github.com/jonaspleyer/crates-io-api"}
-
-[features]
-default = ["reqwest/default-tls"]
-rustls = ["reqwest/rustls-tls"]
